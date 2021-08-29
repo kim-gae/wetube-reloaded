@@ -1,0 +1,54 @@
+{
+    "name": "wetube",
+    "version": "1.0.0",
+    "description": "the best way to watch videos.",
+    "scripts": {
+        "start": "node build/init.js",
+        "build": "npm run build:server && npm run build:assets",
+        "build:server": "babel src -d build",
+        "build:assets": "webpack --mode=production",
+        "dev:server": "nodemon",
+        "dev:assets": "webpack --mode=deveolment -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kim-gae/wetube-reloaded.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kim-gae/wetube-reloaded/issues"
+    },
+    "homepage": "https://github.com/kim-gae/wetube-reloaded#readme",
+    "dependencies": {
+        "@ffmpeg/core": "^0.8.5",
+        "@ffmpeg/ffmpeg": "^0.9.7",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
+        "connect-mongo": "^4.4.1",
+        "css-loader": "^6.2.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-flash": "0.0.2",
+        "express-session": "^1.17.2",
+        "mongoose": "^5.13.5",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.3",
+        "node-fetch": "^2.6.1",
+        "pug": "^3.0.2",
+        "regenerator-runtime": "^0.13.9"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.8",
+        "@babel/core": "^7.15.0",
+        "@babel/node": "^7.14.7",
+        "@babel/preset-env": "^7.14.7",
+        "babel-loader": "^8.2.2",
+        "mini-css-extract-plugin": "^2.2.0",
+        "nodemon": "^2.0.12",
+        "sass": "^1.38.2",
+        "sass-loader": "^12.1.0",
+        "style-loader": "^3.2.1",
+        "webpack": "^5.51.1",
+        "webpack-cli": "^4.8.0"
+    }
+}
